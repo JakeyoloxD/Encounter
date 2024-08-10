@@ -30,9 +30,22 @@ const config = {
         'Escape': ['Escape from a prison', 'Escape from a collapsing cave', 'Escape from an enemy stronghold', 'Escape from a cursed forest']
     },
     encounterObstacles: {
-        'Locked Doors': ['Easy (DC 10)', 'Moderate (DC 15)', 'Hard (DC 20)', 'Masterwork (DC 25)'],
+        'Locked Doors': ['Locked Door:Easy (DC 10)', 'Locked Door: Moderate (DC 15)', 'Locked Door: Hard (DC 20)', 'Locked Door: Masterwork (DC 25)'],
         'Riddles': ['A Riddle'],
-        'Strong Enemies': ['Orc Warlord', 'Dragon', 'Necromancer', 'Giant'],
+        'Strong Enemies': [
+        'Orc Warlord',
+        'Dragon',
+        'Necromancer',
+        'Giant',
+        'Dark Sorcerer',
+        'Vampire Lord',
+        'Troll Chieftain',
+        'Demon Overlord',
+        'Werewolf Alpha',
+        'Warlock',        
+        'Undead General',        
+        'Shadow Assassin'        
+        ],
         'Moral Dilemmas': ['Save one life or many?', 'Betray a friend or a cause?', 'Steal to save a village?', 'Lie to protect the innocent?']
     },
     encounterRewards: {
@@ -63,8 +76,8 @@ function maybeInclude(probability) {
 // 3. GENERATE ENCOUNTER: The core logic to create a random encounter.
 function generateEncounter() {
     const encounterType = getRandomElement(config.encounterTypes);
-    const environment = maybeInclude(0.3) ? getRandomElement(config.environments) : null; // 90% chance to include
-    const weather = maybeInclude(0.1) ? getRandomElement(config.weatherConditions) : null; // 80% chance to include
+    const environment = maybeInclude(0.3) ? getRandomElement(config.environments) : null; // 30% chance to include
+    const weather = maybeInclude(0.1) ? getRandomElement(config.weatherConditions) : null; // 10% chance to include
     const terrain = maybeInclude(0.7) ? getRandomElement(config.terrainFeatures) : null; // 70% chance to include
     const goal = getRandomSubElement(config.encounterGoals, getRandomElement(Object.keys(config.encounterGoals)));
     const obstacleKey = getRandomElement(Object.keys(config.encounterObstacles));
