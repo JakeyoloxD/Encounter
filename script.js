@@ -1,41 +1,42 @@
 // 1. CONFIGURATION: Add or remove variables here.
+// 1. CONFIGURATION: Add or remove variables here.
 const config = {
     encounterTypes: ['Combat', 'Social', 'Exploration', 'Environmental Hazard', 'Quest Hook'],
     npcRaces: {
         'Human': ["Aldric", "Brunhild", "Cedric", "Diana", "Edgar", "Fiona", "Gwen", "Hugh", "Ivy", "Jasper",
-    "Kendra", "Lena", "Mordecai", "Nora", "Oswin", "Pippa", "Quentin", "Renaud", "Selma", "Tobias",
-    "Ursula", "Vera", "Winston", "Xena", "Yvonne", "Zachary", "Aveline", "Bernard", "Clara", "Derek",
-    "Elena", "Frederick", "Greta", "Hilda", "Ivor", "Jocelyn", "Kurt", "Lydia", "Mabel", "Norman"],
+        "Kendra", "Lena", "Mordecai", "Nora", "Oswin", "Pippa", "Quentin", "Renaud", "Selma", "Tobias",
+        "Ursula", "Vera", "Winston", "Xena", "Yvonne", "Zachary", "Aveline", "Bernard", "Clara", "Derek",
+        "Elena", "Frederick", "Greta", "Hilda", "Ivor", "Jocelyn", "Kurt", "Lydia", "Mabel", "Norman"],
         
-    'Elf': ["Elowen", "Thalion", "Aeloria", "Faelan", "Lirael", "Rhiannon", "Eldrin", "Seraphina", "Aelar", "Lyra",
-    "Arannis", "Galadriel", "Elandra", "Tauron", "Vanya", "Lorien", "Eldara", "Fingon", "Mirelle", "Orin",
-    "Nimriel", "Selendir", "Isolde", "Riven", "Ciryandil", "Arwen", "Tiriel", "Elion", "Alura", "Varian",
-    "Lysandra", "Darian", "Aerin", "Calen", "Nymeria", "Sylas", "Elara", "Theron", "Maeve", "Valen"],
+        'Elf': ["Elowen", "Thalion", "Aeloria", "Faelan", "Lirael", "Rhiannon", "Eldrin", "Seraphina", "Aelar", "Lyra",
+        "Arannis", "Galadriel", "Elandra", "Tauron", "Vanya", "Lorien", "Eldara", "Fingon", "Mirelle", "Orin",
+        "Nimriel", "Selendir", "Isolde", "Riven", "Ciryandil", "Arwen", "Tiriel", "Elion", "Alura", "Varian",
+        "Lysandra", "Darian", "Aerin", "Calen", "Nymeria", "Sylas", "Elara", "Theron", "Maeve", "Valen"],
         
-    'Dwarf': ["Thorin", "Dwalin", "Balin", "Fili", "Kili", "Gimli", "Durin", "Oin", "Gloin", "Bofur",
-    "Bombur", "Bifur", "Dori", "Nori", "Ori", "Grimbeorn", "Bruni", "Haldor", "Krag", "Rurik",
-    "Gunnar", "Eirik", "Ragnar", "Brenna", "Sigrid", "Astrid", "Dagmar", "Leif", "Bjarni", "Hilda",
-    "Jorund", "Kara", "Olaf", "Yrsa", "Haldor", "Rurik", "Svein", "Freya", "Thrain", "Yngvar"],
+        'Dwarf': ["Thorin", "Dwalin", "Balin", "Fili", "Kili", "Gimli", "Durin", "Oin", "Gloin", "Bofur",
+        "Bombur", "Bifur", "Dori", "Nori", "Ori", "Grimbeorn", "Bruni", "Haldor", "Krag", "Rurik",
+        "Gunnar", "Eirik", "Ragnar", "Brenna", "Sigrid", "Astrid", "Dagmar", "Leif", "Bjarni", "Hilda",
+        "Jorund", "Kara", "Olaf", "Yrsa", "Haldor", "Rurik", "Svein", "Freya", "Thrain", "Yngvar"],
         
-    'Orc': ["Grom", "Uruk", "Krag", "Borg", "Gruk", "Thok", "Ragnor", "Zog", "Morg", "Gor",
-    "Drok", "Karg", "Krug", "Skar", "Ruk", "Groth", "Vark", "Borgar", "Thrak", "Lurg",
-    "Hruk", "Gorak", "Mog", "Rok", "Grim", "Gorg", "Kragor", "Narg", "Korth", "Skorg",
-    "Bruk", "Horg", "Varg", "Drak", "Zurg", "Murk", "Garn", "Rokar", "Thorn", "Gorak"],
+        'Orc': ["Grom", "Uruk", "Krag", "Borg", "Gruk", "Thok", "Ragnor", "Zog", "Morg", "Gor",
+        "Drok", "Karg", "Krug", "Skar", "Ruk", "Groth", "Vark", "Borgar", "Thrak", "Lurg",
+        "Hruk", "Gorak", "Mog", "Rok", "Grim", "Gorg", "Kragor", "Narg", "Korth", "Skorg",
+        "Bruk", "Horg", "Varg", "Drak", "Zurg", "Murk", "Garn", "Rokar", "Thorn", "Gorak"],
         
-    'Tiefling': ["Azura", "Zephyros", "Riven", "Nyx", "Lilith", "Darius", "Sable", "Eris", "Kael", "Morgana",
-    "Jareth", "Isara", "Thorne", "Vesper", "Lucian", "Seraphine", "Kieran", "Nyssa", "Draven", "Ariella",
-    "Zara", "Jax", "Evelyn", "Lysander", "Selene", "Ronan", "Cyra", "Valen", "Rowan", "Dante",
-    "Orin", "Sienna", "Zane", "Lyra", "Korath", "Evelin", "Kaelith", "Rael", "Nyra", "Talon"],
+        'Tiefling': ["Azura", "Zephyros", "Riven", "Nyx", "Lilith", "Darius", "Sable", "Eris", "Kael", "Morgana",
+        "Jareth", "Isara", "Thorne", "Vesper", "Lucian", "Seraphine", "Kieran", "Nyssa", "Draven", "Ariella",
+        "Zara", "Jax", "Evelyn", "Lysander", "Selene", "Ronan", "Cyra", "Valen", "Rowan", "Dante",
+        "Orin", "Sienna", "Zane", "Lyra", "Korath", "Evelin", "Kaelith", "Rael", "Nyra", "Talon"],
         
-    'Goblin': [ "Grizzle", "Snik", "Ruk", "Zog", "Glim", "Krag", "Murk", "Borg", "Snag", "Grub",
-        "Trix", "Rok", "Fizzle", "Drek", "Skar", "Vog", "Zib", "Blitz", "Grok", "Skrit",
-        "Nix", "Bark", "Grit", "Vrek", "Fuzz", "Jinx", "Rag", "Skulk", "Drib", "Mog",
-        "Krogg", "Zek", "Grub", "Krub", "Froth", "Wik", "Miz", "Gurk", "Trog", "Sniks", "Griefer"],
+        'Goblin': [ "Grizzle", "Snik", "Ruk", "Zog", "Glim", "Krag", "Murk", "Borg", "Snag", "Grub",
+            "Trix", "Rok", "Fizzle", "Drek", "Skar", "Vog", "Zib", "Blitz", "Grok", "Skrit",
+            "Nix", "Bark", "Grit", "Vrek", "Fuzz", "Jinx", "Rag", "Skulk", "Drib", "Mog",
+            "Krogg", "Zek", "Grub", "Krub", "Froth", "Wik", "Miz", "Gurk", "Trog", "Sniks", "Griefer"],
         
-    'Dragonborn': ["Tharax", "Zephyros", "Rathgar", "Kalista", "Draknar", "Syrin", "Vorath", "Zara", "Korrik", "Talon",
-    "Myrak", "Lyria", "Aric", "Vesper", "Gorath", "Seraphis", "Rylor", "Aurelia", "Korak", "Elara",
-    "Balthar", "Nerath", "Jorik", "Rynna", "Draxil", "Kara", "Valthor", "Nyssa", "Thorin", "Zorath",
-    "Kyran", "Eldra", "Draven", "Raida", "Vyris", "Sorin", "Thalric", "Ilyana", "Goran", "Tirza"]
+        'Dragonborn': ["Tharax", "Zephyros", "Rathgar", "Kalista", "Draknar", "Syrin", "Vorath", "Zara", "Korrik", "Talon",
+        "Myrak", "Lyria", "Aric", "Vesper", "Gorath", "Seraphis", "Rylor", "Aurelia", "Korak", "Elara",
+        "Balthar", "Nerath", "Jorik", "Rynna", "Draxil", "Kara", "Valthor", "Nyssa", "Thorin", "Zorath",
+        "Kyran", "Eldra", "Draven", "Raida", "Vyris", "Sorin", "Thalric", "Ilyana", "Goran", "Tirza"]
     },
     npcClasses: [ "Fighter", "Mage", "Rogue", "Bard", "Cleric", "Ranger",
         "Barbarian", "Druid", "Monk", "Paladin", "Sorcerer", "Warlock", "Wizard"],
@@ -58,50 +59,60 @@ const config = {
         'Escape': ['Escape from a prison', 'Escape from a collapsing cave', 'Escape from an enemy stronghold', 'Escape from a cursed forest']
     },
     encounterObstacles: {
-        'Locked Doors': ['Locked Door:Easy (DC 10)', 'Locked Door: Moderate (DC 15)', 'Locked Door: Hard (DC 20)', 'Locked Door: Masterwork (DC 25)'],
-        'Riddles': ['A Riddle'],
-        'Strong Enemies': [
-        'Orc Warlord',
-        'Dragon',
-        'Necromancer',
-        'Giant',
-        'Dark Sorcerer',
-        'Vampire Lord',
-        'Troll Chieftain',
-        'Demon Overlord',
-        'Werewolf Alpha',
-        'Warlock',        
-        'Undead General',        
-        'Shadow Assassin'        
+        'Locked Doors': [
+            { type: 'Locked Door', subtype: 'Easy (DC 10)' },
+            { type: 'Locked Door', subtype: 'Moderate (DC 15)' },
+            { type: 'Locked Door', subtype: 'Hard (DC 20)' },
+            { type: 'Locked Door', subtype: 'Masterwork (DC 25)' }
         ],
-        'Moral Dilemmas': ['Save one life or many?', 'Betray a friend or a cause?', 'Steal to save a village?', 'Lie to protect the innocent?']
+        'Riddles': [
+            { type: 'Riddle', subtype: 'A Riddle' }
+        ],
+        'Strong Enemies': [
+            { type: 'Strong Enemy', subtype: 'Orc Warlord' },
+            { type: 'Strong Enemy', subtype: 'Dragon' },
+            { type: 'Strong Enemy', subtype: 'Necromancer' },
+            { type: 'Strong Enemy', subtype: 'Giant' },
+            { type: 'Strong Enemy', subtype: 'Dark Sorcerer' },
+            { type: 'Strong Enemy', subtype: 'Vampire Lord' },
+            { type: 'Strong Enemy', subtype: 'Troll Chieftain' },
+            { type: 'Strong Enemy', subtype: 'Demon Overlord' },
+            { type: 'Strong Enemy', subtype: 'Werewolf Alpha' },
+            { type: 'Strong Enemy', subtype: 'Warlock' },
+            { type: 'Strong Enemy', subtype: 'Undead General' },
+            { type: 'Strong Enemy', subtype: 'Shadow Assassin' }
+        ],
+        'Moral Dilemmas': [
+            { type: 'Moral Dilemma', subtype: 'Save one life or many?' },
+            { type: 'Moral Dilemma', subtype: 'Betray a friend or a cause?' },
+            { type: 'Moral Dilemma', subtype: 'Steal to save a village?' },
+            { type: 'Moral Dilemma', subtype: 'Lie to protect the innocent?' }
+        ]
     },
     encounterRewards: {
-        'Experience Points': ['100 XP', '250 XP', '500 XP', '1000 XP'],
-        'Loot': ['Gold coins', 'Magic weapon', 'Potion of healing', 'Scroll of fireball'],
-        'Information': ['A secret location', 'Enemy plans', 'Ancient history', 'A hidden weakness for an upcoming boss fight'],
-        'Alliances': ['A local tribe', 'A guild', 'A noble house', 'A mysterious stranger']
+        'Gold': ['10 Gold Pieces', '50 Gold Pieces', '100 Gold Pieces', '500 Gold Pieces'],
+        'Items': ['Health Potion', 'Magic Sword', 'Enchanted Armor', 'Spellbook'],
+        'Experience': ['100 XP', '200 XP', '500 XP', '1000 XP'],
+        'Magic': ['Ring of Strength', 'Cloak of Invisibility', 'Wand of Fireballs', 'Amulet of Protection']
     },
-    randomModifiers: ['Reinforcements Arrive', 'A Hidden Trap is Triggered', 'Weather Change'],
-    timedEvents: ['Rescue within a Time Limit', 'Defend Against Waves of Enemies', 'Reach a Location Before Sunrise']
+    randomModifiers: ['Increased difficulty', 'Additional traps', 'Hidden clues', 'Extra enemies'],
+    timedEvents: ['Ambush', 'Natural disaster', 'Encounter with a famous NPC', 'Race against time']
 };
 
-// 2. HELPER FUNCTIONS: Utility functions to select random elements.
-function getRandomElement(array) {
-    return array[Math.floor(Math.random() * array.length)];
+// 2. UTILITIES: Functions for random selection and conditional inclusion.
+function getRandomElement(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
 }
 
 function getRandomSubElement(obj, key) {
-    const subArray = obj[key];
-    return getRandomElement(subArray);
+    return getRandomElement(obj[key]);
 }
 
-// Helper function to determine if a feature should be included
-function maybeInclude(probability) {
-    return Math.random() < probability;
+function maybeInclude(chance) {
+    return Math.random() < chance;
 }
 
-// 3. GENERATE ENCOUNTER: The core logic to create a random encounter.
+// 3. GENERATE ENCOUNTER: Function to build and display the encounter.
 function generateEncounter() {
     const encounterType = getRandomElement(config.encounterTypes);
     const environment = maybeInclude(0.3) ? getRandomElement(config.environments) : null; // 30% chance to include
@@ -150,7 +161,7 @@ function generateEncounter() {
     }
 
     encounterDescription += `Goal: ${goal}\n`;
-    encounterDescription += `Obstacle: ${obstacle}\n`;
+    encounterDescription += `Obstacle: ${obstacle.type} - ${obstacle.subtype}\n`;
     encounterDescription += `Reward: ${rewardType} - ${reward}\n`;
 
     if (modifier) {
@@ -168,6 +179,7 @@ function generateEncounter() {
     // Display the encounter
     document.getElementById('encounter-output').innerText = encounterDescription;
 }
+
 
 function adjustFontSize() {
     const textbox = document.querySelector('.textbox');
