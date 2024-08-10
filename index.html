@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Encounter Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/@saeris/typeface-beleren-bold@latest/index.css" rel="stylesheet" type="text/css" />
+    <style>
+        #broken-image {
+            display: none; /* Hidden by default */
+            position: fixed; /* Ensure it's positioned on top */
+            top: 0;
+            left: 0;
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            object-fit: cover; /* Cover the whole screen */
+            z-index: 1000; /* Ensure it appears above other elements */
+            opacity: 0.6; /* Adjust opacity to make the image semi-transparent */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 id="encounter" onclick="toggleFullscreen()">Random Encounter Generator</h1>
+</header>
+    <div>
+    <div id="encounter-output" class="textbox"></div>
+    <button id="generate-encounter">Generate Encounter</button>
+        <img id="broken-image" src="./image1.jpg" alt="Broken Image">
+    </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
