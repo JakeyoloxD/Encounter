@@ -9,14 +9,14 @@ const config = {
         "Elena", "Frederick", "Greta", "Hilda", "Ivor", "Jocelyn", "Kurt", "Lydia", "Mabel", "Norman"],
         
         'Elf': ["Elowen", "Thalion", "Aeloria", "Faelan", "Lirael", "Rhiannon", "Eldrin", "Seraphina", "Aelar", "Lyra",
-        "Arannis", "Galadriel", "Elandra", "Tauron", "Vanya", "Lorien", "Eldara", "Fingon", "Mirelle", "Orin",
-        "Nimriel", "Selendir", "Isolde", "Riven", "Ciryandil", "Arwen", "Tiriel", "Elion", "Alura", "Varian",
+        "Arannis", "Galen", "Elandra", "Tauron", "Vanya", "Lorian", "Eldara", "Fingon", "Mirelle", "Orin",
+        "Nimriel", "Selendir", "Isolde", "Riven", "Cyrian", "Aelwen", "Tiriel", "Elion", "Alura", "Varian",
         "Lysandra", "Darian", "Aerin", "Calen", "Nymeria", "Sylas", "Elara", "Theron", "Maeve", "Valen"],
         
         'Dwarf': ["Thorin", "Dwalin", "Balin", "Fili", "Kili", "Gimli", "Durin", "Oin", "Gloin", "Bofur",
         "Bombur", "Bifur", "Dori", "Nori", "Ori", "Grimbeorn", "Bruni", "Haldor", "Krag", "Rurik",
         "Gunnar", "Eirik", "Ragnar", "Brenna", "Sigrid", "Astrid", "Dagmar", "Leif", "Bjarni", "Hilda",
-        "Jorund", "Kara", "Olaf", "Yrsa", "Haldor", "Rurik", "Svein", "Freya", "Thrain", "Yngvar"],
+        "Jorund", "Kara", "Olaf", "Yrsa", "Svein", "Freya", "Thrain", "Yngvar"],
         
         'Orc': ["Grom", "Uruk", "Krag", "Borg", "Gruk", "Thok", "Ragnor", "Zog", "Morg", "Gor",
         "Drok", "Karg", "Krug", "Skar", "Ruk", "Groth", "Vark", "Borgar", "Thrak", "Lurg",
@@ -52,11 +52,36 @@ const config = {
     weatherConditions: ['Sunny', 'Rainy', 'Snowy', 'Nighttime', 'Foggy'],
     terrainFeatures: ['Cliffs', 'Rivers', 'Dense Foliage', 'Narrow Paths', 'Ruins'],
     encounterGoals: {
-        'Survive': ['Avoid traps', 'Escape enemies', 'Find shelter', 'Outlast a storm'],
-        'Negotiate': ['Trade goods', 'Forge an alliance', 'End a conflict', 'Secure passage'],
-        'Retrieve an Item': ['A magical artifact', 'A stolen heirloom', 'Lost knowledge', 'A rare ingredient'],
-        'Solve a Puzzle': ['Riddle of the Sphinx', 'Ancient mechanism', 'Magical illusion', 'Complex cipher'],
-        'Escape': ['Escape from a prison', 'Escape from a collapsing cave', 'Escape from an enemy stronghold', 'Escape from a cursed forest']
+        'Survive': [
+            { type: 'Survive', subtype: 'Avoid traps' },
+            { type: 'Survive', subtype: 'Escape enemies' },
+            { type: 'Survive', subtype: 'Find shelter' },
+            { type: 'Survive', subtype: 'Outlast a storm' }
+        ],
+        'Negotiate': [
+            { type: 'Negotiate', subtype: 'Trade goods' },
+            { type: 'Negotiate', subtype: 'Forge an alliance' },
+            { type: 'Negotiate', subtype: 'End a conflict' },
+            { type: 'Negotiate', subtype: 'Secure passage' }
+        ],
+        'Retrieve an Item': [
+            { type: 'Retrieve an Item', subtype: 'A magical artifact' },
+            { type: 'Retrieve an Item', subtype: 'A stolen heirloom' },
+            { type: 'Retrieve an Item', subtype: 'Lost knowledge' },
+            { type: 'Retrieve an Item', subtype: 'A rare ingredient' }
+        ],
+        'Solve a Puzzle': [
+            { type: 'Solve a Puzzle', subtype: 'Riddle of the Sphinx' },
+            { type: 'Solve a Puzzle', subtype: 'Ancient mechanism' },
+            { type: 'Solve a Puzzle', subtype: 'Magical illusion' },
+            { type: 'Solve a Puzzle', subtype: 'Complex cipher' }
+        ],
+        'Escape': [
+            { type: 'Escape', subtype: 'Escape from a prison' },
+            { type: 'Escape', subtype: 'Escape from a collapsing cave' },
+            { type: 'Escape', subtype: 'Escape from an enemy stronghold' },
+            { type: 'Escape', subtype: 'Escape from a cursed forest' }
+        ]
     },
     encounterObstacles: {
         'Locked Doors': [
@@ -160,7 +185,7 @@ function generateEncounter() {
         encounterDescription += '\n';
     }
 
-    encounterDescription += `Goal: ${goal}\n`;
+    encounterDescription += `Goal: ${goal.type} - ${goal.subtype}\n`;
     encounterDescription += `Obstacle: ${obstacle.type} - ${obstacle.subtype}\n`;
     encounterDescription += `Reward: ${rewardType} - ${reward}\n`;
 
