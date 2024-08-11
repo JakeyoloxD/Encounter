@@ -71,10 +71,12 @@ const config = {
             { type: 'Retrieve an Item', subtype: 'A rare ingredient' }
         ],
         'Solve a Puzzle': [
-            { type: 'Solve a Puzzle', subtype: 'Riddle of the Sphinx' },
-            { type: 'Solve a Puzzle', subtype: 'Ancient mechanism' },
-            { type: 'Solve a Puzzle', subtype: 'Magical illusion' },
-            { type: 'Solve a Puzzle', subtype: 'Complex cipher' }
+            { type: 'Solve a Puzzle', subtype: 'Strength' },
+            { type: 'Solve a Puzzle', subtype: 'Intelligence' },
+            { type: 'Solve a Puzzle', subtype: 'Wisdom' },
+            { type: 'Solve a Puzzle', subtype: 'Constitution' },
+            { type: 'Solve a Puzzle', subtype: 'Charisma ' },
+            { type: 'Solve a Puzzle', subtype: 'Dexterity' }
         ],
         'Escape': [
             { type: 'Escape', subtype: 'Escape from a prison' },
@@ -91,7 +93,7 @@ const config = {
             { type: 'Locked Door', subtype: 'Masterwork (DC 25)' }
         ],
         'Riddles': [
-            { type: 'Riddle', subtype: 'A Riddle' }
+            { type: 'Riddle', subtype: 'Give the player a Riddle' }
         ],
         'Strong Enemies': [
             { type: 'Strong Enemy', subtype: 'Orc Warlord' },
