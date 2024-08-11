@@ -1,5 +1,4 @@
 // 1. CONFIGURATION: Add or remove variables here.
-// 1. CONFIGURATION: Add or remove variables here.
 const config = {
     encounterTypes: ['Combat', 'Social', 'Exploration', 'Environmental Hazard', 'Quest Hook'],
     npcRaces: {
